@@ -12,6 +12,7 @@ dockerpath=jaganmohangumpa/microservices
 # Authenticate & tag
 docker login --username jaganmohangumpa
 docker tag microservices $dockerpath
+echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
