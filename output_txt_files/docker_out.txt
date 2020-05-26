@@ -1,28 +1,9 @@
-microservices                        latest                                           293b4545e526        33 seconds ago      1.26GB
-docker/getting-started               latest                                           3c156928aeec        5 weeks ago         24.8MB
-docker/desktop-storage-provisioner   v1.1                                             e704287ce753        2 months ago        41.8MB
-docker/desktop-vpnkit-controller     v1.0                                             79da37e5a3aa        2 months ago        36.6MB
-docker/desktop-kubernetes            kubernetes-v1.16.5-cni-v0.7.5-critools-v1.15.0   a86647f0b376        4 months ago        279MB
-k8s.gcr.io/kube-apiserver            v1.16.5                                          fc838b21afbb        4 months ago        159MB
-k8s.gcr.io/kube-controller-manager   v1.16.5                                          441835dd2301        4 months ago        151MB
-k8s.gcr.io/kube-proxy                v1.16.5                                          0ee1b8a3ebe0        4 months ago        82.7MB
-k8s.gcr.io/kube-scheduler            v1.16.5                                          b4d073a9efda        4 months ago        83.5MB
-docker/kube-compose-controller       v0.4.25-alpha1                                   129151cdf35f        6 months ago        35.6MB
-docker/kube-compose-api-server       v0.4.25-alpha1                                   989749268895        6 months ago        50.7MB
-docker/kube-compose-installer        v0.4.25-alpha1                                   2a71ac5a1359        6 months ago        42.3MB
-k8s.gcr.io/etcd                      3.3.15-0                                         b2756210eeab        8 months ago        247MB
-k8s.gcr.io/coredns                   1.6.2                                            bf261d157914        9 months ago        44.1MB
-python                               3.7.3-stretch                                    34a518642c76        11 months ago       929MB
-k8s.gcr.io/pause                     3.1                                              da86e6ba6ca1        2 years ago         742kB
-
-(.devops) > project-ml-microservice-kubernetes>docker run -it --rm --name microservices -p 8000:80 microservices
- * Serving Flask app "app" (lazy loading)
- * Environment: production
-   WARNING: Do not use the development server in a production environment.
-   Use a production WSGI server instead.
- * Debug mode: on
- * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 222-054-549
-172.17.0.1 - - [26/May/2020 06:48:31] "GET / HTTP/1.1" 200 -
+[2020-05-26 13:09:22,402] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-05-26 13:09:22,479] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-05-26 13:09:22,505] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+172.17.0.1 - - [26/May/2020 13:09:22] "POST /predict HTTP/1.1" 200 -
