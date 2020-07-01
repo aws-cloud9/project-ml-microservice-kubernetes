@@ -1,9 +1,20 @@
-[2020-05-26 13:09:22,402] INFO in app: JSON payload:
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 989-636-058
+172.17.0.1 - - [01/Jul/2020 02:55:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [01/Jul/2020 02:55:19] "GET /favicon.ico HTTP/1.1" 404 -
+[2020-07-01 03:00:20,713] INFO in app: JSON payload:
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2020-05-26 13:09:22,479] INFO in app: Inference payload DataFrame:
+[2020-07-01 03:00:20,732] INFO in app: Inference payload DataFrame:
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2020-05-26 13:09:22,505] INFO in app: Scaling Payload:
+[2020-07-01 03:00:20,745] INFO in app: Scaling Payload:
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-172.17.0.1 - - [26/May/2020 13:09:22] "POST /predict HTTP/1.1" 200 -
+172.17.0.1 - - [01/Jul/2020 03:00:20] "POST /predict HTTP/1.1" 200 -
